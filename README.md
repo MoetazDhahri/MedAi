@@ -1,181 +1,95 @@
-MediA
+MedAI: AI Health Assistant 🧑‍⚕️🤖
 
-An AI health assistant with JWT authentication and chat history, built with React (TypeScript), Flask, and SQLite.
+MedAI is an intelligent health assistant that provides personalized health advice through empathetic AI-driven conversations. Built with React (TypeScript), Flask, and SQLite, MedAI offers a secure, scalable platform with features like JWT-based authentication, chat history, and input sanitization, ensuring a reliable experience for users.
+Key Features:
 
-Setup Instructions
+    Authentication: Secure login and registration with JWT.
 
-Prerequisites
+    Chat: Empathetic AI responses powered by a mock Gemini API (future medical tuning).
 
+    Chat History: Storing and retrieving conversation history.
 
+    Security: Input sanitization and rate limiting to ensure secure interactions.
 
+    Responsive: Mobile-first design ensuring usability across all devices.
 
+    Accessibility: Fully accessible with ARIA labels and high contrast for easy navigation.
 
-Python (v3.8+)
+Tech Stack:
 
+    Frontend: React (TypeScript), Mobile-first design.
 
+    Backend: Flask, JWT-based authentication, SQLite for data storage.
 
-Node.js (v16+)
+    Scalability: Future migration to PostgreSQL for scalability.
 
+    Future Plans: Google/Facebook login, multi-language support, live doctor consultations.
 
+Setup Instructions:
+Backend Setup:
 
-SQLite
-
-Backend Setup
-
-
-
-
-
-Navigate to backend:
+    Navigate to the backend directory:
 
 cd backend
 
-
-
-Create virtual environment:
+Create a virtual environment:
 
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
-
 
 Install dependencies:
 
 pip install -r requirements.txt
 
-
-
-Create .env in backend:
+Create a .env file and add:
 
 GEMINI_API_KEY=your_api_key_here
 JWT_SECRET=your-secret-key
-
-
 
 Initialize SQLite:
 
 sqlite3 database.db < ../database/schema.sql
 
-
-
 Run Flask:
 
-python run.py
+    python run.py
 
-Frontend Setup
+Frontend Setup:
 
-
-
-
-
-Navigate to frontend:
+    Navigate to the frontend directory:
 
 cd frontend
-
-
 
 Install dependencies:
 
 npm install
 
+Start the development server:
 
+    npm start
 
-Start development server:
+Accessing the App:
 
-npm start
+    Frontend: http://localhost:3000
 
-Accessing the App
+    Backend API: http://localhost:5000
 
+Scalability & Future Plans:
 
+    Database: Move to PostgreSQL for larger data scale.
 
+    Authentication: Integrate Google/Facebook login.
 
+    Subscription Plans: Premium access for advanced features.
 
-Frontend: http://localhost:3000
+    Multi-language: Support for French, Arabic, Spanish (RTL).
 
+    Mobile App: PWA or React Native app.
 
+    AI Tuning: Future integration with RAG for enhanced medical accuracy.
 
-Backend API: http://localhost:5000
+    Medical Integration: Live doctor consultations via the platform.
 
-Features
-
-
-
-
-
-Authentication: JWT-based login/register.
-
-
-
-Chat: Empathetic AI responses (mocked Gemini API).
-
-
-
-Chat History: Store/retrieve messages.
-
-
-
-Security: Input sanitization, rate limiting.
-
-
-
-Responsive: Mobile-first design.
-
-
-
-Accessibility: ARIA labels, high contrast.
-
-Scalability & Future Plans
-
-
-
-
-
-Database: PostgreSQL for scale.
-
-
-
-Auth: Google/Facebook login.
-
-
-
-Subscriptions: Premium plans.
-
-
-
-Multi-language: French, Arabic, Spanish (RTL).
-
-
-
-Mobile App: PWA or React Native.
-
-
-
-AI Tuning: RAG for medical accuracy.
-
-
-
-Medical Integration: Live doctor consultations.
-
-Notes
-
-
-
-
-
-Replace call_gemini_api in app/services/gemini_service.py with real Gemini API.
-
-
-
-Add .env to .gitignore.
-
-
-
-Update CORS in app/__init__.py for production.
-
-
-
-Deploy frontend on Vercel, backend on Render.
-
-License
+License:
 
 MIT License (see LICENSE file).
