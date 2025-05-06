@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Flask-JWT-Extended
+Flask-Cors
+python-dotenv
+Werkzeug>=2.3 # Ensure compatibility with Flask features like password hashing
+bcrypt        # For password hashing
